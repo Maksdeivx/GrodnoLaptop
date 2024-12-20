@@ -1,0 +1,366 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>Dialog</class>
+ <widget class="QDialog" name="Dialog">
+  <property name="windowModality">
+   <enum>Qt::NonModal</enum>
+  </property>
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>400</width>
+    <height>565</height>
+   </rect>
+  </property>
+  <property name="contextMenuPolicy">
+   <enum>Qt::DefaultContextMenu</enum>
+  </property>
+  <property name="windowTitle">
+   <string>Dialog</string>
+  </property>
+  <property name="layoutDirection">
+   <enum>Qt::LeftToRight</enum>
+  </property>
+  <property name="styleSheet">
+   <string notr="true">QDialog {
+background-color: rgb(255, 255, 255);
+}</string>
+  </property>
+  <property name="sizeGripEnabled">
+   <bool>false</bool>
+  </property>
+  <property name="modal">
+   <bool>false</bool>
+  </property>
+  <layout class="QVBoxLayout" name="verticalLayout">
+   <item>
+    <widget class="QLabel" name="title_label">
+     <property name="maximumSize">
+      <size>
+       <width>16777215</width>
+       <height>40</height>
+      </size>
+     </property>
+     <property name="font">
+      <font>
+       <family>Inter Medium</family>
+       <pointsize>17</pointsize>
+      </font>
+     </property>
+     <property name="text">
+      <string>Новый заказ</string>
+     </property>
+     <property name="alignment">
+      <set>Qt::AlignBottom|Qt::AlignHCenter</set>
+     </property>
+    </widget>
+   </item>
+   <item>
+    <widget class="Line" name="line">
+     <property name="frameShadow">
+      <enum>QFrame::Raised</enum>
+     </property>
+     <property name="lineWidth">
+      <number>0</number>
+     </property>
+     <property name="midLineWidth">
+      <number>1</number>
+     </property>
+     <property name="orientation">
+      <enum>Qt::Horizontal</enum>
+     </property>
+    </widget>
+   </item>
+   <item>
+    <widget class="QLineEdit" name="client_lineEdit">
+     <property name="font">
+      <font>
+       <family>Inter</family>
+       <pointsize>13</pointsize>
+      </font>
+     </property>
+     <property name="mouseTracking">
+      <bool>true</bool>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">border: 1px solid rgb(197, 197, 197);
+border-radius: 5px;
+padding: 4px;</string>
+     </property>
+     <property name="placeholderText">
+      <string>Клиент</string>
+     </property>
+    </widget>
+   </item>
+   <item>
+    <widget class="QLineEdit" name="device_lineEdit">
+     <property name="font">
+      <font>
+       <family>Inter</family>
+       <pointsize>13</pointsize>
+      </font>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">border: 1px solid rgb(197, 197, 197);
+border-radius: 5px;
+padding: 4px;</string>
+     </property>
+     <property name="placeholderText">
+      <string>Устройство</string>
+     </property>
+    </widget>
+   </item>
+   <item>
+    <widget class="QLineEdit" name="service_lineEdit">
+     <property name="font">
+      <font>
+       <family>Inter</family>
+       <pointsize>13</pointsize>
+      </font>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">border: 1px solid rgb(197, 197, 197);
+border-radius: 5px;
+padding: 4px;</string>
+     </property>
+     <property name="placeholderText">
+      <string>Услуга</string>
+     </property>
+    </widget>
+   </item>
+   <item>
+    <widget class="QComboBox" name="status_comboBox">
+     <property name="font">
+      <font>
+       <family>Inter</family>
+       <pointsize>13</pointsize>
+      </font>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">QComboBox {
+font-size: 13pt;
+padding: 4px;
+border-radius: 5px;
+border: 1px solid rgb(197, 197, 197);
+}
+QComboBox::drop-down {
+border: 0px;
+}
+QComboBox::down-arrow{
+image: url(:/icon/icons/down-arrow.png);
+width: 15px;
+height: 15px;
+margin-right: 15px;
+}
+QComboBox QListView {
+border: 0px;
+outline: 0px;
+}</string>
+     </property>
+     <property name="editable">
+      <bool>false</bool>
+     </property>
+     <property name="currentIndex">
+      <number>0</number>
+     </property>
+     <property name="insertPolicy">
+      <enum>QComboBox::InsertAtBottom</enum>
+     </property>
+     <property name="frame">
+      <bool>true</bool>
+     </property>
+     <item>
+      <property name="text">
+       <string>Активен</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>Выполнен</string>
+      </property>
+     </item>
+    </widget>
+   </item>
+   <item>
+    <widget class="QLineEdit" name="price_lineEdit">
+     <property name="font">
+      <font>
+       <family>Inter</family>
+       <pointsize>13</pointsize>
+      </font>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">border: 1px solid rgb(197, 197, 197);
+border-radius: 5px;
+padding: 4px;</string>
+     </property>
+     <property name="placeholderText">
+      <string>Стоимость</string>
+     </property>
+    </widget>
+   </item>
+   <item>
+    <widget class="QDateEdit" name="dateEdit">
+     <property name="font">
+      <font>
+       <family>Inter</family>
+       <pointsize>13</pointsize>
+      </font>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">padding: 4px;
+border: 1px solid rgb(197, 197, 197);
+border-radius: 5px;</string>
+     </property>
+     <property name="wrapping">
+      <bool>false</bool>
+     </property>
+     <property name="frame">
+      <bool>true</bool>
+     </property>
+     <property name="buttonSymbols">
+      <enum>QAbstractSpinBox::NoButtons</enum>
+     </property>
+     <property name="accelerated">
+      <bool>false</bool>
+     </property>
+     <property name="correctionMode">
+      <enum>QAbstractSpinBox::CorrectToPreviousValue</enum>
+     </property>
+    </widget>
+   </item>
+   <item>
+    <widget class="QLineEdit" name="phone_lineEdit">
+     <property name="font">
+      <font>
+       <family>Inter</family>
+       <pointsize>13</pointsize>
+      </font>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">border: 1px solid rgb(197, 197, 197);
+border-radius: 5px;
+padding: 4px;</string>
+     </property>
+     <property name="placeholderText">
+      <string>Номер телефона</string>
+     </property>
+    </widget>
+   </item>
+   <item>
+    <widget class="QComboBox" name="master_comboBox">
+     <property name="font">
+      <font>
+       <family>Inter</family>
+       <pointsize>13</pointsize>
+      </font>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">QComboBox {
+font-size: 13pt;
+padding: 4px;
+border-radius: 5px;
+border: 1px solid rgb(197, 197, 197);
+}
+QComboBox::drop-down {
+border: 0px;
+}
+QComboBox::down-arrow{
+image: url(:/icon/icons/down-arrow.png);
+width: 15px;
+height: 15px;
+margin-right: 15px;
+}
+QComboBox QListView {
+border: 0px;
+outline: 0px;
+}</string>
+     </property>
+     <property name="editable">
+      <bool>false</bool>
+     </property>
+     <property name="currentIndex">
+      <number>0</number>
+     </property>
+     <property name="insertPolicy">
+      <enum>QComboBox::InsertAtBottom</enum>
+     </property>
+     <property name="frame">
+      <bool>true</bool>
+     </property>
+     <item>
+      <property name="text">
+       <string>Константин</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>Михаил</string>
+      </property>
+     </item>
+    </widget>
+   </item>
+   <item>
+    <widget class="QLineEdit" name="comment_lineEdit">
+     <property name="font">
+      <font>
+       <family>Inter</family>
+       <pointsize>13</pointsize>
+      </font>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">border: 1px solid rgb(197, 197, 197);
+border-radius: 5px;
+padding: 4px;</string>
+     </property>
+     <property name="placeholderText">
+      <string>Комментарий</string>
+     </property>
+    </widget>
+   </item>
+   <item>
+    <widget class="QPushButton" name="add_Button">
+     <property name="minimumSize">
+      <size>
+       <width>0</width>
+       <height>50</height>
+      </size>
+     </property>
+     <property name="maximumSize">
+      <size>
+       <width>16777215</width>
+       <height>16777215</height>
+      </size>
+     </property>
+     <property name="sizeIncrement">
+      <size>
+       <width>0</width>
+       <height>0</height>
+      </size>
+     </property>
+     <property name="font">
+      <font>
+       <family>Inter Medium</family>
+       <pointsize>16</pointsize>
+      </font>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">border: 0px;
+background-color: rgb(84, 252, 120);
+color: rgb(255, 255, 255);
+font-size: 16pt;
+border-radius: 6px;</string>
+     </property>
+     <property name="text">
+      <string>Добавить</string>
+     </property>
+    </widget>
+   </item>
+  </layout>
+ </widget>
+ <resources>
+  <include location="icons_dialog.qrc"/>
+ </resources>
+ <connections/>
+</ui>

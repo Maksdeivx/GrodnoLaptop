@@ -1,0 +1,19 @@
+<RCC>
+  <qresource prefix="icons">
+    <file>icons/up-arrow.png</file>
+    <file>icons/help.svg</file>
+    <file>icons/down-arrow.png</file>
+    <file>icons/GL.png</file>
+    <file>icons/add.svg</file>
+    <file>icons/delete.svg</file>
+    <file>icons/edit.svg</file>
+    <file>icons/export.svg</file>
+    <file>icons/filter.svg</file>
+  </qresource>
+  <qresource prefix="fonts">
+    <file>fonts/Inter-Black.otf</file>
+    <file>fonts/Inter-Medium.otf</file>
+    <file>fonts/Jost.ttf</file>
+    <file>fonts/Roboto.ttf</file>
+  </qresource>
+</RCC>
